@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# Build / temp
+dist/
+build/
+tmp/
+temp/
+
+# Streamlit cache
+.streamlit/secrets.toml
+
+# ML artifacts: large / generated files
+artifacts/models/random_forest.pkl
+artifacts/models/*.joblib
+
+# If you do NOT want to store any pickle models in git:
+artifacts/models/*.pkl
+
+# Optional: generated datasets
+# artifacts/generated/*.csv

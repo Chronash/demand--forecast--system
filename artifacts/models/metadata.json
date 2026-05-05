@@ -1,0 +1,48 @@
+{
+    "best_model": "xgboost",
+    "version": "1.0.0",
+    "feature_columns": [
+        "store_id",
+        "region_encoded",
+        "store_type_encoded",
+        "month",
+        "weekday",
+        "day_of_year",
+        "is_weekend",
+        "is_holiday",
+        "promo_flag",
+        "temperature",
+        "price"
+    ],
+    "regions": [
+        "Москва",
+        "Санкт-Петербург",
+        "Поволжье",
+        "Урал",
+        "Сибирь",
+        "Юг"
+    ],
+    "store_types": [
+        "Супермаркет",
+        "Минимаркет",
+        "Гипермаркет",
+        "АЗС"
+    ],
+    "metrics": {
+        "linear_regression": {
+            "mae": 48.1719,
+            "rmse": 57.0203,
+            "r2": 0.1797
+        },
+        "random_forest": {
+            "mae": 14.9467,
+            "rmse": 21.2612,
+            "r2": 0.886
+        },
+        "xgboost": {
+            "mae": 11.3619,
+            "rmse": 14.6463,
+            "r2": 0.9459
+        }
+    }
+}
