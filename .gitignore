@@ -35,15 +35,17 @@ build/
 tmp/
 temp/
 
-# Streamlit cache
+# Streamlit secrets
 .streamlit/secrets.toml
 
-# ML artifacts: large / generated files
+# ML artifacts: ignore heavy/generated model files by default
 artifacts/models/random_forest.pkl
 artifacts/models/*.joblib
-
-# If you do NOT want to store any pickle models in git:
 artifacts/models/*.pkl
+
+# Keep required encoder files in git
+!artifacts/models/label_encoder_region.pkl
+!artifacts/models/label_encoder_store_type.pkl
 
 # Optional: generated datasets
 # artifacts/generated/*.csv

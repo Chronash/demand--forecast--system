@@ -1,48 +1,85 @@
 {
-    "best_model": "xgboost",
-    "version": "1.0.0",
-    "feature_columns": [
-        "store_id",
-        "region_encoded",
-        "store_type_encoded",
-        "month",
-        "weekday",
-        "day_of_year",
-        "is_weekend",
-        "is_holiday",
-        "promo_flag",
-        "temperature",
-        "price"
-    ],
-    "regions": [
-        "Москва",
-        "Санкт-Петербург",
-        "Поволжье",
-        "Урал",
-        "Сибирь",
-        "Юг"
-    ],
-    "store_types": [
-        "Супермаркет",
-        "Минимаркет",
-        "Гипермаркет",
-        "АЗС"
-    ],
-    "metrics": {
-        "linear_regression": {
-            "mae": 48.1719,
-            "rmse": 57.0203,
-            "r2": 0.1797
-        },
-        "random_forest": {
-            "mae": 14.9467,
-            "rmse": 21.2612,
-            "r2": 0.886
-        },
-        "xgboost": {
-            "mae": 11.3619,
-            "rmse": 14.6463,
-            "r2": 0.9459
-        }
+  "version": "3.0",
+  "best_model": "xgboost",
+  "feature_columns": [
+    "store_id",
+    "region",
+    "store_type",
+    "month",
+    "weekday",
+    "day_of_year",
+    "week_of_year",
+    "quarter",
+    "days_to_month_end",
+    "is_weekend",
+    "is_holiday",
+    "promo_flag",
+    "temperature",
+    "temp_delta_vs_lag1",
+    "price",
+    "price_delta_vs_lag1",
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "rolling_mean_7",
+    "rolling_mean_14",
+    "rolling_std_7"
+  ],
+  "regions": [
+    "Москва",
+    "Поволжье",
+    "Санкт-Петербург",
+    "Сибирь",
+    "Урал",
+    "Юг"
+  ],
+  "store_types": [
+    "АЗС",
+    "Гипермаркет",
+    "Минимаркет",
+    "Супермаркет"
+  ],
+  "metrics": {
+    "linear_regression": {
+      "mae": 9.473135768414815,
+      "rmse": 11.83736191647322,
+      "r2": 0.9055466596647811
+    },
+    "random_forest": {
+      "mae": 4.4084261706205075,
+      "rmse": 5.759200460047982,
+      "r2": 0.9776420562143425
+    },
+    "xgboost": {
+      "mae": 3.843641519546509,
+      "rmse": 4.911385733538794,
+      "r2": 0.9837402105331421
     }
+  },
+  "cv_results": {
+    "linear_regression": {
+      "cv_avg_mae": 9.70677434919134,
+      "cv_avg_rmse": 12.155033414703556,
+      "cv_avg_r2": 0.8864315718824691
+    },
+    "random_forest": {
+      "cv_avg_mae": 5.007951494616445,
+      "cv_avg_rmse": 6.625739986629435,
+      "cv_avg_r2": 0.9626008387579874
+    },
+    "xgboost": {
+      "cv_avg_mae": 4.641581010818482,
+      "cv_avg_rmse": 6.066597436168782,
+      "cv_avg_r2": 0.9648212790489197
+    }
+  },
+  "dataset": {
+    "rows": 800000,
+    "price_min": 70.0,
+    "price_max": 140.0,
+    "temperature_min": -35.0,
+    "temperature_max": 35.0,
+    "date_min": "2022-01-01",
+    "date_max": "2025-12-30"
+  }
 }

@@ -1,0 +1,3 @@
+﻿created_at,store_id,region,store_type,month,weekday,day_of_year,is_weekend,is_holiday,promo_flag,temperature,price,predicted_demand,predicted_revenue,model_name,model_version
+2026-05-11 20:03:04,50,Москва,Супермаркет,7,5,197,True,False,False,24.0,95.0,120,11419.22,xgboost,3.0
+2026-05-11 20:03:19,50,Москва,Супермаркет,7,5,197,True,False,False,24.0,108.0,100,10747.96,xgboost,3.0
